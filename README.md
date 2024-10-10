@@ -1,70 +1,39 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+错题管理系统功能要求及页面要求说明
+1. 用户登录
+功能要求：用户可以通过用户名和密码进行登录
+用户体验要求：提供错误提示信息，如密码错误或账户不存在；必填字段未输入信息有提醒
+页面要求：输入框大小一致，布局合理，字段标签明确
+2. 用户注册
+功能要求：允许新用户创建账户，需填写必要信息如用户名、密码、邮箱等（自己定）
+安全性要求：密码需要加密存储和验证；密码必须是字母和数字的组合、长度必须超过8位之类的
+验证要求：需要验证邮箱或手机号的格式；必填字段未输入信息有提醒
+3. 菜单显示
+功能要求：在界面上提供清晰的导航菜单，方便用户快速访问不同功能
+4. 总错题库页面展示
+功能要求：展示所有错题的列表，包括错题的标题、创建时间、科目等；分页处理
+页面要求：列表整齐，每项信息对齐，无长短不一现象（自己考虑怎么处理）
+5. 我的错题库页面展示
+功能要求：展示用户个人的错题列表，允许用户查看和管理自己的错题；分页处理
+页面要求：界面应包含操作按钮，如编辑等
+6. 单个错题详情页面展示
+功能要求：点击列表中的错题，可以查看错题的详细信息，如题目、答案、解析等（自己定）
+页面要求：信息展示清晰，有逻辑地组织内容，排版正常
+7. 新增错题页面
+功能要求：提供一个表单，允许用户输入或上传错题信息
+用户体验要求：提供错误提示信息，如标题超过最大长度；必填字段未输入信息有提醒
+8. 修改错题库页面
+功能要求：允许用户编辑已存在的错题信息，能回显之前已存在的错题信息
+9. 错题库检索
+功能要求：提供搜索框，允许用户通过关键词搜索错题库中的题目
+10. JWT登录
+功能要求：使用JSON Web Tokens（JWT）进行用户身份验证和会话管理
+安全性要求：确保JWT的生成、验证和存储过程安全
+附加功能
+1. 批量删除
+功能要求：提供选择框，允许用户选择多个错题并进行批量删除操作
+页面要求：操作需谨慎，提供确认步骤
+2. 文件上传
+功能要求：支持用户上传文档或图片作为错题的附件；限制上传大小
+页面要求：有清晰的上传进度和成功/失败提示
+3. 用户信息编辑
+功能要求：允许用户编辑自己的账户信息，如密码、邮箱等（自选）
